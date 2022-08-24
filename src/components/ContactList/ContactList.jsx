@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import './ContactList.css';
 import { useSelector, useDispatch } from 'react-redux/es/exports';
 import actions from '../../redux/contacts-actions';
@@ -38,14 +37,4 @@ function ContactList() {
   );
 }
 
-ContactList.propTypes = {
-  contactsArray: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.string,
-      name: PropTypes.string,
-      number: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    })
-  ),
-  onDelete: PropTypes.func,
-};
 export default ContactList;
