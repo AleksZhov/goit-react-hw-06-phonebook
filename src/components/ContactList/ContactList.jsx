@@ -4,7 +4,7 @@ import './ContactList.css';
 import { useSelector, useDispatch } from 'react-redux/es/exports';
 import actions from '../../redux/contacts-actions';
 
-function ContactList({ contactsArray }) {
+function ContactList() {
   const dispatch = useDispatch();
   const filterValue = useSelector(state => state.contacts.filter);
   const contacts = useSelector(state => state.contacts.items);

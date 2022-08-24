@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './Filter.css';
+import s from './Filter.module.css';
 import { useDispatch, useSelector } from 'react-redux/es/exports';
 import actions from '../../redux/contacts-actions';
 
@@ -8,9 +8,10 @@ const Filter = () => {
   const filterValue = useSelector(state => state.contacts.filter);
   const dispatch = useDispatch();
   return (
-    <div className="filter-container">
+    <div className={s.filterContainer}>
       <p>Find contacts by name</p>
       <input
+        className={s.filterInput}
         name="filter"
         value={filterValue}
         onChange={e => {
